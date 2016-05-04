@@ -36,3 +36,8 @@ deepSearchRun(matchFunc, blah, runFunc).then(function(updatedBlah){
 	console.log(updatedBlah);
 });
 ```
+
+[![NPM][nodei-image]][nodei-url]
+
+[nodei-image]: https://nodei.co/npm/deep-search-run.png?downloads=true&downloadRank=true&stars=true
+[nodei-url]: https://www.npmjs.com/package/deep-search-run
