@@ -1,0 +1,28 @@
+{
+  "name": "deep-search-run",
+  "version": "1.0.0",
+  "description": "Test each property on a javascript object with a test function and run a separate function if that test passes, returns a promise when said function has been run on all properties matching",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirrodgepodge/deep-search-run.git"
+  },
+  "keywords": [
+    "deep",
+    "object",
+    "asynchronous",
+    "functions"
+  ],
+  "author": "sirRodgePodge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sirrodgepodge/deep-search-run/issues"
+  },
+  "homepage": "https://github.com/sirrodgepodge/deep-search-run#readme",
+  "dependencies": {
+    "bluebird": "^3.3.5"
+  }
+}

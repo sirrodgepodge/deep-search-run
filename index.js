@@ -30,10 +30,10 @@ module.exports = function (matchFunc, obj, runFunc) {
 function propPromiseGetter(runFunc, matchFunc, obj, additionalArgs, promiseArr) {
   promiseArr = promiseArr || [];
   Object.keys(obj).forEach(function (val, index) {
-    if (matchFunc(val)) {
+    if (matchFunc(obj, val)) {
       promiseArr.push(runFunc instanceof Promise ? runFunc.apply(undefined, [obj, val].concat(_toConsumableArray(additionalArgs))) : new Promise(function (resolve, reject) {
         runFunc.apply(undefined, [function (err, returnedVal) {
-          if (err) return console.log('Error running promise at this index: ', index, '  Error: ', err), reject(err);else resolve(returnedVal);
+          if (err) return console.log('Error running promise on this property: ', val, '  Error: ', err), reject(err);else resolve();
         }, obj, val].concat(_toConsumableArray(additionalArgs)));
       }));
     }

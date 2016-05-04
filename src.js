@@ -28,14 +28,14 @@ module.exports = function(matchFunc, obj, runFunc, ...additionalArgs) {
 function propPromiseGetter(runFunc, matchFunc, obj, additionalArgs, promiseArr) {
   promiseArr = promiseArr || [];
   Object.keys(obj).forEach((val, index) => {
-    if(matchFunc(val)) {
+    if(matchFunc(obj, val)) {
       promiseArr.push(runFunc instanceof Promise ?
         runFunc(obj, val, ...additionalArgs)
       :
         new Promise((resolve, reject) => {
           runFunc(function(err, returnedVal){
-            if(err) return console.log('Error running promise at this index: ', index,'  Error: ', err), reject(err);
-            else resolve(returnedVal);
+            if(err) return console.log('Error running promise on this property: ', val,'  Error: ', err), reject(err);
+            else resolve();
           }, obj, val, ...additionalArgs);
         })
       );
