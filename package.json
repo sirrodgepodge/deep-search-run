@@ -1,6 +1,6 @@
 {
   "name": "deep-search-run",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test each property on a javascript object with a test function and run a separate function if that test passes, returns a promise when said function has been run on all properties matching",
   "main": "index.js",
   "scripts": {
